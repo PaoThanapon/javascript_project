@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+
+<button type="button" onclick="showProduct(proDuct)">Click me to Show Product</button>
+
+
+<p id="demo"></p>
+
+<script>
+const proDuct =[
+        {id:'01',name:'paper',price:'10$',img:'https://static.wikia.nocookie.net/minecraft/images/b/b2/Paper.png'},
+        {id:'02',name:'bucket',price:'10$',img:'https://static.wikia.nocookie.net/minecraft_gamepedia/images/f/fc/Bucket_JE2_BE2.png'},
+        {id:'03',name:'carrot',price:'10$',img:'https://static.wikia.nocookie.net/minecraft_gamepedia/images/4/4e/Carrot_JE3_BE2.png'},
+        {id:'04',name:'cookie',price:'10$',img:'https://static.wikia.nocookie.net/minecraft_gamepedia/images/b/b3/Cookie_JE2_BE2.png'},
+        {id:'05',name:'bone',price:'10$',img:'https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/3a/Bone_JE3_BE2.png'},
+        {id:'06',name:'bread',price:'10$',img:'https://static.wikia.nocookie.net/minecraft_gamepedia/images/4/44/Bread_JE3_BE3.png'},
+        {id:'07',name:'apple',price:'10$',img:'https://static.wikia.nocookie.net/minecraft_gamepedia/images/a/af/Apple_JE3_BE3.png'},
+        {id:'08',name:'cake',price:'10$',img:'https://static.wikia.nocookie.net/minecraft_gamepedia/images/9/9a/Cake_%28item%29_JE3_BE3.png'},
+        {id:'09',name:'fish',price:'10$',img:'https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/53/Cooked_Cod_JE4_BE3.png'},
+        {id:'10',name:'gold',price:'10$',img:'https://static.wikia.nocookie.net/minecraft_gamepedia/images/8/8a/Gold_Ingot_JE4_BE2.png'},
+    ]
+
+let text = "<ul>";
+let x = document.getElementById("demo")
+proDuct.forEach(showProduct);
+x.innerHTML = text;
+
+function showProduct(value) {
+            text += `<li>ID: ${value.id} <br>Name: ${value.name} <br>Price: ${value.price} <br><img src=${value.img}></li>`
+            
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        } 
+
+
+</script>
+
+</body>
+</html>
